@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - h5py
     - numpy
     - onnx >=1.4.0
-    - python
+    - python >=3.6
     - pyyaml
     - six
 
