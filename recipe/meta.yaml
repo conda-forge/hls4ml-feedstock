@@ -19,6 +19,9 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools >=46.1.0
+    - setuptools-scm >=5
+    - wheel
   run:
     - h5py
     - numpy
@@ -26,9 +29,11 @@ requirements:
     - python >=3.6
     - pyyaml
     - six
+    - tabulate
 
 test:
   imports:
+    - contrib
     - hls4ml
     - hls4ml.converters
   commands:
@@ -37,7 +42,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/hls-fpga-machine-learning/hls4ml
+  home: https://fastmachinelearning.org/hls4ml
   summary: Machine learning in FPGAs using HLS
   license: Apache-2.0
   license_file: LICENSE
