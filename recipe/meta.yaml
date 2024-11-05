@@ -1,5 +1,5 @@
 {% set name = "hls4ml" %}
-{% set version = "0.6.0" %}
+{% set version = "0.8.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hls4ml-{{ version }}.tar.gz
-  sha256: dc2bb6b3438d3c86f579f755a1178bb4d3cc5f50ccba18e03a9eee257c287dce
+  sha256: bc003730ef01af86ab3b1c51d5c504140e2bf4545384c8973cadfb28630c0c18
 
 build:
   number: 0
