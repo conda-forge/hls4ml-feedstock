@@ -1,5 +1,5 @@
 {% set name = "hls4ml" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hls4ml-{{ version }}.tar.gz
-  sha256: dc2bb6b3438d3c86f579f755a1178bb4d3cc5f50ccba18e03a9eee257c287dce
+  sha256: af62da04ee8bee44c512abeee91222a963e575f814330c815aaaff2ed5e75d9a
 
 build:
   number: 0
@@ -19,6 +19,9 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools >=46.1.0
+    - setuptools-scm >=5
+    - wheel
   run:
     - h5py
     - numpy
@@ -26,9 +29,11 @@ requirements:
     - python >=3.6
     - pyyaml
     - six
+    - tabulate
 
 test:
   imports:
+    - contrib
     - hls4ml
     - hls4ml.converters
   commands:
@@ -37,7 +42,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/hls-fpga-machine-learning/hls4ml
+  home: https://fastmachinelearning.org/hls4ml
   summary: Machine learning in FPGAs using HLS
   license: Apache-2.0
   license_file: LICENSE
